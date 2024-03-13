@@ -1,0 +1,31 @@
+.main{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+.main video{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.4);
+}
+.centralflex{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.centralflex h1{
+    text-align: center;
+    font-size: 80px;
+}
+.centralflex span{
+    font-size: 25px;
+    color: #707070;
+    padding-left: 90px;
+    /* font-size: bold; */
+}

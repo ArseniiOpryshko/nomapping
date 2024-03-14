@@ -20,7 +20,7 @@
     width: 210px;
     height: 100%;
     content: "";
-    z-index: 2;
+    z-index: 1;
     top: 0;
 }
 .container::before {

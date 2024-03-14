@@ -11,6 +11,9 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%);
+    /* backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(4px); */
+    z-index: 4;
 }
 .header .title{
     display: flex;

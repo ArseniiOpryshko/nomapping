@@ -1,0 +1,53 @@
+.aboutus_section{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+}
+.titleblock{
+    display: flex;
+    flex-direction: column;
+    width: 934px;
+}
+.titleh4{
+    color: #02C39D;
+    font-size: 20px;
+    font-weight: bold;
+}
+.titleh2{
+    font-weight: 600;
+    font-size: 60px;
+    width: 934px;
+}
+.textblock{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+.text{
+    font-size: 30px;
+}
+.underlind{
+    text-decoration: underline;
+}
+.bttn{
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 4px 10px;
+    width: 190px;
+    height: 45px;
+    text-align: center;
+}
+.con{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}

@@ -1,5 +1,4 @@
 import styles from "./Clients.module.css"
-import Marquee from "react-fast-marquee";
 
 const images1 = [
     '1cbitrix.png',

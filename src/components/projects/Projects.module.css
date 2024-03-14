@@ -1,0 +1,40 @@
+.projects_section{
+    width: 100%;
+    background-color: black;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 23px;
+    color: #02C39D;
+    /* margin-bottom: 70px; */
+    text-align: center;
+}
+.pallete{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+
+    margin-top: 80px;
+}
+.project:nth-child(2){
+    margin-top: 70px;
+}
+.project:nth-child(4){
+    margin-top: 70px;
+}
+
+.project{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.project .img{
+    width: 600px;
+}
+.name{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 5px;
+}

@@ -1,6 +1,10 @@
-import MainSection from "@/components/main_section/MainSection";
+import Clients from "@/components/clients/Clients";
+import MainSection from "@/components/main/Main";
 
 export default function Home() {
-  return <MainSection/>
+  return <main>
+    <MainSection/>
+    <Clients/>
+  </main>
  
 }

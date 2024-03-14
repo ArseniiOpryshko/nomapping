@@ -1,0 +1,83 @@
+.clients{
+    width: 100%;
+    background-color: black;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+.container::before,
+.container::after {
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    top: 0;
+}
+.container::before {
+    left: 0;
+    background: linear-gradient(to right, #000000, #00000002);
+}
+.container::after {
+    right: 0;
+    background: linear-gradient(to left, #000000, #00000002);
+}
+.logosslideToRight{
+    display: inline-block;
+    white-space: nowrap;
+    animation: 20s slideToRight infinite linear;
+}
+.logosslideToLeft{
+    display: inline-block;
+    white-space: nowrap;
+    animation: 20s slideToLeft infinite linear;
+}
+.blockimg{
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    margin: 0 20px;
+    position: relative;
+    
+}
+.container .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes slideToRight {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideToLeft {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.light{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import MainLayout from "@/components/main_layout/MainLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Work_Sans({  styles: "300,400,500,600,700,800", subsets: ["latin"] });
 
 export const metadata = {
   title: "Студія моушен дизайну та інтерактивного медіа",

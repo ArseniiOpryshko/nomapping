@@ -1,0 +1,49 @@
+.header{
+    background-color: rgba(108, 108, 108, 0.28);
+    display: flex;
+    width: 96%;
+    height: 60px;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid #383838;
+    align-items: center;
+    margin-top: 25px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+.header .title{
+    display: flex;
+    gap: 7px;
+    padding: 5px 0 10px 12px;
+    cursor: pointer;
+}
+.title .innerblock{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    justify-content: center;
+}
+.title .innerblock .top{
+    font-size: 24px;
+}
+.title .innerblock .bottom{
+    font-size: 16px;
+}
+.socials{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+}
+.socials a img{
+    width: 20px;
+}
+.navbar{
+    position: absolute;
+    right: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}

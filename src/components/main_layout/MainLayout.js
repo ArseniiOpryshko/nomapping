@@ -1,11 +1,9 @@
+
+import Header from "./header/Header";
+
 export default function MainLayout({children}){
     return <>
-        <header>
-            
-        </header>
-        <main>
-            {children}
-        </main>
-    </>
-    
+        <Header/>
+        {children}        
+    </>   
 }

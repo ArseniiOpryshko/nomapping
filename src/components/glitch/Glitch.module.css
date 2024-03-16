@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
 }
 .glitch_section .text{
   position: relative;
@@ -15,6 +16,7 @@
   padding: 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
 .glitch_section .text::before,
@@ -171,5 +173,11 @@
   }
   100% {
     clip: rect(83px, auto, 40px, 30px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .glitch_section .text{
+    font-size: calc(2px + 38 * (100vw / 800));
   }
 }

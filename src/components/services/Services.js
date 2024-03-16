@@ -3,8 +3,9 @@ import styles from "./Services.module.css"
 
 export default function Services(){
     return <section className={styles.services_section}>
-        <div className={styles.light1}></div>
-        <div className={styles.light2}></div>
+        <img className={styles.light1} alt="light1" src="lights/service1.png"/>
+        <img className={styles.light2} alt="light2" src="lights/service2.png"/>
+
 
         <h4 className={styles.title}>SERVICES</h4>
         <div className={styles.column}>

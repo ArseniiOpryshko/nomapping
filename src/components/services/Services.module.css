@@ -2,6 +2,8 @@
     width: 100%;
     background-color: black;
     padding-top: 200px;
+    position: relative;
+    overflow: hidden;
 }
 .title{
     color: #02C39D;
@@ -9,11 +11,12 @@
     font-size: 20px;
     margin-bottom: 40px;
     padding-left: 80px;
+    z-index: 2;
 }
 .column{
     display: flex;
     flex-direction: column;
-
+    
 }
 .service{
     width: 100%;
@@ -25,7 +28,8 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    z-index: 3;
 }
 .service:hover .preview{
     opacity: 0;
@@ -70,4 +74,66 @@
     color: white;
     text-decoration: none;
     margin: 0 auto;
+    cursor: pointer;
+    z-index: 2;
+    /* margin-bottom: 100px; */
+}
+.light1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.light2{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+@media screen and (max-width: 1150px) {
+    .title{
+        padding-left: 20px;
+    }
+    .service{
+        padding: 0 30px;
+        height: 160px;
+    }
+    .service h3{
+        font-size: calc(10px + 65 * (100vw / 1150));
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .info{
+        font-size: calc(10px + 15 * (100vw / 1150));
+        width: 95%;
+    }
+    .service img{
+        height: 90px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .service{
+        padding: 0 10px;
+    }
+    .service img{
+        height: 60px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .title{
+        padding-left: 0;
+        text-align: center;
+    }
+    .service img{
+        display: none;
+    }
+    .service .preview{
+        justify-content: center;
+    }
+    .service .preview h3{
+        text-align: center;
+    }
+    .bttn{
+        font-size: 16px;
+        width: 95%;
+        padding: 10px 0;
+    }
 }

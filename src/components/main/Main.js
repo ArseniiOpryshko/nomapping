@@ -1,5 +1,6 @@
 
 import styles from "./Main.module.css"
+import TextAnimation1 from "@/configs/text_animation1";
 
 export default function Main(){
     return <section className={styles.main_section}>
@@ -12,9 +13,11 @@ export default function Main(){
         <div className={styles.content}>
             <div className={styles.centralflex}>
                 <h1>
-                    STUDIO OF MOTION DESIGN AND INTERACTIVE MEDIA
+                    <TextAnimation1 text="STUDIO OF MOTION DESIGN AND INTERACTIVE MEDIA" delay={400}/>
                 </h1>
-                <span>NoMapping Studio</span>
+                <span className={styles.initspan}>
+                    <TextAnimation1 text="NoMapping Studio" delay={800}/>
+                </span>
             </div>
         </div>
     </section>

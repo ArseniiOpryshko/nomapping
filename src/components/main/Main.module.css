@@ -36,14 +36,58 @@
     display: flex;
     flex-direction: column;
     z-index: 3;
+    /* overflow: hidden; */
+    position: relative;
 }
 .centralflex h1{
     text-align: center;
-    font-size: 80px;
+    font-size:80px;
 }
-.centralflex span{
+.centralflex h1 span{
+    text-align: center;
+    font-size: 80px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.centralflex span {
     font-size: 25px;
     color: #707070;
-    padding-left: 90px;
-}
 
+}
+.initspan{
+    padding-left: 95px;
+    position: absolute;
+    bottom: -5px;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+@media screen and (max-width: 1000px) {
+    .initspan{
+        padding-left: 7%;
+        position: absolute;
+        bottom: -5px;
+    
+    }
+}
+@media screen and (max-width: 850px) {
+    .centralflex h1{
+        font-size: calc(16px + 64 * (100vw / 1950));
+    }
+    .centralflex h1 span{
+        font-size: calc(16px + 64 * (100vw / 1950));
+    }
+    .initspan{
+        padding-left: 0px;
+        text-align: center  ;
+        position: relative;
+        top:-5px;
+        font-size: calc(9px + 16 * (100vw / 1950));
+    }
+    .centralflex span {
+        font-size: 25px;
+        color: #707070;
+        font-size: calc(12px + 13 * (100vw / 1950));
+    }
+}

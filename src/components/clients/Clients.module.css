@@ -7,6 +7,7 @@
     justify-content: center;
     gap: 30px;
     position: relative;
+    overflow: hidden;
 }
 
 .container {
@@ -34,12 +35,12 @@
 .logosslideToRight{
     display: inline-block;
     white-space: nowrap;
-    animation: 20s slideToRight infinite linear;
+    animation: 50s slideToRight infinite linear;
 }
 .logosslideToLeft{
     display: inline-block;
     white-space: nowrap;
-    animation: 20s slideToLeft infinite linear;
+    animation: 50s slideToLeft infinite linear;
 }
 .blockimg{
     display: inline-block;
@@ -80,4 +81,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 430px) {
+    .container::before {
+        background: none;
+    }
+    .container::after {
+        background: none;
+    }
 }

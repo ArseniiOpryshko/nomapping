@@ -1,6 +1,8 @@
 .projects_section{
     width: 100%;
     background-color: black;
+    position: relative;
+    overflow: hidden;
 }
 .title{
     text-transform: uppercase;
@@ -15,26 +17,85 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
+    
+    padding-top: 80px;
+}
+.project:nth-child(2), .project:nth-child(4){
+    margin-top: 120px;
+}
 
-    margin-top: 80px;
-}
-.project:nth-child(2){
-    margin-top: 70px;
-}
-.project:nth-child(4){
-    margin-top: 70px;
-}
 
 .project{
+    z-index: 1;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 .project .img{
     width: 600px;
+    cursor: pointer;
 }
 .name{
     font-size: 23px;
     font-weight: bold;
     margin-top: 5px;
+}
+.light1{
+    position: absolute;
+    top: -250px;
+}
+.btnns{
+    margin: 70px auto 170px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1550px) {
+    .pallete{
+        width: 95%;
+        gap: 20px;
+    }
+    .project .img{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 970px) {
+    .pallete{
+        width: 95%;
+        gap: 20px;
+    }
+    .pallete{
+        grid-template-columns: 1fr;
+    }
+    .project:nth-child(2), .project:nth-child(4){
+        margin-top: 20px;
+    }
+    .project{
+        margin: 0 auto;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    .name{
+        font-size: 17px;
+    }
+    .btnns{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn{
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }

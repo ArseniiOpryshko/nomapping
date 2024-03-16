@@ -1,5 +1,6 @@
 import AboutUs from "@/components/aboutus/AboutUs";
 import Clients from "@/components/clients/Clients";
+import Contacts from "@/components/contacts/Contacts";
 import Glitch from "@/components/glitch/Glitch";
 import MainSection from "@/components/main/Main";
 import Projects from "@/components/projects/Projects";
@@ -13,6 +14,7 @@ export default function Home() {
     <Services/>
     <Glitch/>
     <Projects/>
+    <Contacts/>
   </main>
  
 }

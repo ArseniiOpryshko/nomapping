@@ -1,17 +1,29 @@
+'use client'
+import { useEffect, useState } from "react";
 import styles from "./Projects.module.css"
 import Project from "./project/Project"
+import axios from "axios";
 
 
 export default function Projects(){
 
-    const projects = [ 
-        {src: "proj.png", name: "FORD’S WINTER FESTIVAL"},
-        {src: "proj.png", name: "FORD’S WINTER FESTIVAL"},
-        {src: "proj.png", name: "FORD’S WINTER FESTIVAL"},
-        {src: "proj.png", name: "FORD’S WINTER FESTIVAL"},
-    ] 
+    const [projects, setProjects] = useState([]);
 
-    return <section className={styles.projects_section}>
+    useEffect(()=>{
+        const fetchData = async () =>{
+          const resp = await axios.get('https://api.vimeo.com/users/nomapping/videos?per_page=4', {
+              headers: {
+                  Authorization: 'Bearer 356b932c2a2e22b86926fa64a675540d'
+              }
+          });
+          console.log(resp)
+          setProjects(resp.data.data);
+          
+        } 
+        fetchData();
+      }, []);
+
+    return <section className={styles.projects_section} id="projects">
         <img className={styles.light1} alt="light_project" src="lights/projectlight.png"/>
 
         <h4 className={styles.title}>What have we done</h4>
@@ -21,8 +33,8 @@ export default function Projects(){
             ))}
         </div>
         <div className={styles.btnns}>
-            <a className={styles.btn} href="#">All projects</a>
-            <a className={styles.btn} href="#">Order new project</a>
+            <a className={styles.btn} href="/projects">All projects</a>
+            <a className={styles.btn} href="#contacts">Order new project</a>
         </div>
     </section>
 }

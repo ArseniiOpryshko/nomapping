@@ -34,11 +34,13 @@
 .project .img{
     width: 600px;
     cursor: pointer;
+    border-radius: 6px;
 }
 .name{
     font-size: 23px;
     font-weight: bold;
     margin-top: 5px;
+    max-width: 600px;
 }
 .light1{
     position: absolute;
@@ -58,8 +60,11 @@
     font-weight: bold;
     cursor: pointer;
     z-index: 2;
+    transition: 0.2s;
 }
-
+.btn:hover{
+    color: rgb(255, 228, 228);
+}
 @media screen and (max-width: 1550px) {
     .pallete{
         width: 95%;

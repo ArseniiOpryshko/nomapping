@@ -1,0 +1,106 @@
+.menu_section{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    z-index: 4;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_column{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none; 
+}
+.languages{
+    display: flex;
+    gap: 20px;
+}
+.language{
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    color: #8F8F8F;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    }
+.language:hover{
+    color: rgb(255, 255, 255);
+}
+
+.routes{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.route{
+    text-decoration: none;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+}
+.route:hover{
+    color: rgb(243, 180, 180);
+}
+.socials{
+    color: #686868;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* justify-content: center;  */
+}
+.socialLink{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.socialLink:hover{
+    opacity: 1;
+}
+.socialLink img{
+    height: 25px;
+}
+.light1, .light2, .light3{
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none; 
+}
+.light1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.light2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.light3{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+}
+
+@media screen and (max-width: 550px) {
+    .routs a{
+        /* font-size: 16px; */
+        font-size: calc(0px + 80 * (100vw / 550));
+    }
+}

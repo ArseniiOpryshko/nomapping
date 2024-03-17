@@ -2,7 +2,7 @@ import styles from "./Services.module.css"
 
 
 export default function Services(){
-    return <section className={styles.services_section}>
+    return <section className={styles.services_section} id="services">
         <img className={styles.light1} alt="light1" src="lights/service1.png"/>
         <img className={styles.light2} alt="light2" src="lights/service2.png"/>
 

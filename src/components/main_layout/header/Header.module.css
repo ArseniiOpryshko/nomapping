@@ -12,7 +12,7 @@
     transform: translate(-50%);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    z-index: 4;
+    z-index: 5;
 }
 .header .title{
     display: flex;
@@ -46,11 +46,26 @@
 .socials a img{
     width: 20px;
 }
-.navbar{
+.navbar, .navbar_active{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     position: absolute;
     right: 10px;
     padding-right: 10px;
     cursor: pointer;
+    background-image: url("/navbar.png");
+    transition: 0.2s;
+}
+.navbar{
+    width: 40px;
+    height: 40px;
+    background-image: url("/navbar.png");
+}
+.navbar_active{
+    background-image: url("/close.png");
+    width: 30px;
+    height: 30px;
 }
 @media screen and (max-width: 750px) {
     .socials{
@@ -61,7 +76,6 @@
     }
     .navbar{
         position: relative;
-        right: 0;
     }
     .header{
         justify-content: space-between;

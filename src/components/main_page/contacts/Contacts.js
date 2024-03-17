@@ -9,7 +9,7 @@ export default function Contacts(){
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true});
     
-    return <section className={styles.contacts_section}>
+    return <section className={styles.contacts_section} id="contacts">
         <img className={styles.light1} alt="light_contacts" src="lights/contactlight1.png"/>
         <img className={styles.light2} alt="light_contacts" src="lights/contactlight2.png"/>
 

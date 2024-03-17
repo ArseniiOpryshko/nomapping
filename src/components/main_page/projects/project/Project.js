@@ -17,7 +17,7 @@ export default function Project({project, index}){
             }
         }}
         viewport={{ once: true }}>
-        <img className={styles.img} src={project?.src} alt="project"/>
+        <img className={styles.img} src={project?.pictures?.base_link} alt="project"/>
         <p className={styles.name}>{project?.name}</p>
     </motion.div>
             

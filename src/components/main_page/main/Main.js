@@ -3,7 +3,7 @@ import styles from "./Main.module.css"
 import TextAnimation1 from "@/configs/text_animation1";
 
 export default function Main(){
-    return <section className={styles.main_section}>
+    return <section className={styles.main_section} id="home">
         <div className={styles.video_block}>
             <video className={styles.video} autoPlay loop muted playsInline preload="auto">
                 <source src="back_vid.mp4" type="video/mp4" />

@@ -15,7 +15,7 @@ export default function AboutUs(){
     const reftitle3 = useRef(null);
     const isInView3 = useInView(reftitle3, {amount: 0.3, once: true});
 
-    return <section className={styles.aboutus_section}>
+    return <section className={styles.aboutus_section} id="aboutus">
         <div className={styles.titleblock}>
             <h4 className={styles.titleh4} ref={reftitle2}>
                 <TextAnimation2 isInView={isInView2} text="WHAT WE DO"/>

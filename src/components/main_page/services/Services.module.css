@@ -77,6 +77,11 @@
     cursor: pointer;
     z-index: 2;
     /* margin-bottom: 100px; */
+    transition: 0.2s;
+}
+.bttn:hover{
+    color: rgb(255, 228, 228);
+    border: 2px solid rgb(255, 228, 228);
 }
 .light1{
     position: absolute;

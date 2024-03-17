@@ -25,7 +25,7 @@ const images2 = [
     'КВЗ.png',
 ];
 export default function Clients(){
-    return <section className={styles.clients}>
+    return <section className={styles.clients} id="clients">
         <img className={styles.light} alt="light" src="lights/logosLight.png"/>
 
         <div className={styles.container}>

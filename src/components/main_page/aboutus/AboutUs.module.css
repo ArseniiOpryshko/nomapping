@@ -51,8 +51,8 @@
     transition: 0.2s;
 }
 .bttn:hover{
-    color: rgb(255, 228, 228);
-    border: 2px solid rgb(255, 228, 228);
+    color: rgb(255, 243, 243);
+    border: 2px solid rgb(224, 224, 224);
 }
 .con{
     display: grid;

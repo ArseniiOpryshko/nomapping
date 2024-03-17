@@ -24,7 +24,8 @@ export default function Projects(){
       }, []);
 
     return <section className={styles.projects_section} id="projects">
-        <img className={styles.light1} alt="light_project" src="lights/projectlight.png"/>
+        <img className={styles.light2} alt="light_project" src="lights/projectlight.png"/>
+        {/* <img className={styles.light2} alt="light_project" src="lights/projectlight.png"/> */}
 
         <h4 className={styles.title}>What have we done</h4>
         <div className={styles.pallete}>

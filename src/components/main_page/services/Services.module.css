@@ -113,6 +113,9 @@
     .service img{
         height: 90px;
     }
+    .light2{
+        top: 0%;
+    }
 }
 @media screen and (max-width: 680px) {
     .service{

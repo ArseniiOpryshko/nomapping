@@ -16,9 +16,9 @@ export default function Menu({isActive, handleClick}){
         transition={{ duration: 0.3 }}
       >
         <div className={styles.content}>
-            <img className={styles.light1} alt="light1" src="lights/menu1.png"/>
-            <img className={styles.light2} alt="light2" src="lights/menu2.png"/>
-            <img className={styles.light3} alt="light3" src="lights/menu3.png"/>
+            <img className={styles.light1} alt="light1" src="/lights/menu1.png"/>
+            <img className={styles.light2} alt="light2" src="/lights/menu2.png"/>
+            <img className={styles.light3} alt="light3" src="/lights/menu3.png"/>
 
 
             <div className={styles.flex_column}>
@@ -35,11 +35,11 @@ export default function Menu({isActive, handleClick}){
                     <motion.a onClick={handleClick} className={styles.route} href="/#contacts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>CONTACTS</motion.a>
                 </div>
                 <nav className={styles.socials}>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="icons/facebook.png" alt="Facebook" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.9 }}> <img src="icons/vimeo.png" alt="Vimeo" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1 }}> <img src="icons/youtube.png" alt="YouTube" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.1 }}> <img src="icons/linked.png" alt="LinkedIn" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.2 }}> <img src="icons/x.png" alt="X" /></motion.a>
+                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="/icons/facebook.png" alt="Facebook" /></motion.a>
+                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.9 }}> <img src="/icons/vimeo.png" alt="Vimeo" /></motion.a>
+                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1 }}> <img src="/icons/youtube.png" alt="YouTube" /></motion.a>
+                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.1 }}> <img src="/icons/linked.png" alt="LinkedIn" /></motion.a>
+                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.2 }}> <img src="/icons/x.png" alt="X" /></motion.a>
                 </nav>
             </div>
         </div>

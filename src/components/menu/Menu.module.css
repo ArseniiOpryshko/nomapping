@@ -37,7 +37,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: 0.2s;
-    }
+}
 .language:hover{
     color: rgb(255, 255, 255);
 }
@@ -63,14 +63,13 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    /* justify-content: center;  */
 }
 .socialLink{
     opacity: 0.5;
     transition: 0.2s;
 }
 .socialLink:hover{
-    opacity: 1;
+    opacity: 1!important;
 }
 .socialLink img{
     height: 25px;
@@ -99,8 +98,14 @@
 }
 
 @media screen and (max-width: 550px) {
-    .routs a{
-        /* font-size: 16px; */
+    .route{
         font-size: calc(0px + 80 * (100vw / 550));
+    }
+
+}
+@media screen and (max-width: 300px) {
+    .language{
+        font-size: calc(4px + 16 * (100vw / 300));
+
     }
 }

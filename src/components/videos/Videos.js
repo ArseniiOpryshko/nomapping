@@ -21,10 +21,8 @@ export default function Videos(){
 
         console.log(resp)
         if (projects.length > 0) {
-            // Если массив уже содержит данные, добавляем новые данные в конец массива
             setProjects(prevProjects => [...prevProjects, ...resp.data.data]);
         } else {
-            // Если массив пуст, устанавливаем новые данные
             setProjects(resp.data.data);
         }
         setPaging(resp.data.paging);
@@ -51,20 +49,20 @@ export default function Videos(){
     }, [paging]);
     
     return <section className={styles.projects_section}>
-        <h2>PROJECTS</h2>
-        <div className={styles.projects}>
-            {projects.map((item, i) => (
-                <Video key={i} project={item} index={i} />
-            ))}
-            {projects[0] && paging.next ?  
-                <div ref={containerRef} className={styles.loader}>
-                    <div className={styles.inner_one} ></div>
-                    <div className={styles.inner_two} ></div>
-                    <div className={styles.inner_three} ></div>
-                </div>
-            : null}
-           
-
-        </div>
+            <img className={styles.light2} src="/lights/projecstlight4.png" alt="project"></img>
+            <img className={styles.light} src="/lights/projecstlight.png" alt="project"></img>
+            <h2 className={styles.projh}>PROJECTS</h2>
+            <div className={styles.projects}>
+                {projects.map((item, i) => (
+                    <Video key={i} project={item} index={i} />
+                ))}
+                {!projects[0] || paging.next ?  
+                    <div ref={containerRef} className={styles.loader}>
+                        <div className={styles.inner_one} ></div>
+                        <div className={styles.inner_two} ></div>
+                        <div className={styles.inner_three} ></div>
+                    </div>
+                : null}
+            </div>
     </section>
 }

@@ -22,7 +22,7 @@ export default function Header({children}){
     return <>
         <header className={styles.header}>
             <div onClick={redirectToHome} className={styles.title}>
-                <img src="logo.png"/>
+                <img src="/logo.png"/>
                 <div className={styles.innerblock}>
                     <span className={styles.top}>
                         NOMAPPING
@@ -34,19 +34,19 @@ export default function Header({children}){
             </div>
             <nav className={styles.socials}> 
                 <a href="#">
-                    <img src="icons/facebook.png"/>
+                    <img src="/icons/facebook.png"/>
                 </a>
                 <a href="#">
-                    <img src="icons/vimeo.png"/>
+                    <img src="/icons/vimeo.png"/>
                 </a>
                 <a href="#">
-                    <img src="icons/youtube.png"/>
+                    <img src="/icons/youtube.png"/>
                 </a>
                 <a href="#">
-                    <img src="icons/linked.png"/>
+                    <img src="/icons/linked.png"/>
                 </a>
                 <a href="#">
-                    <img src="icons/x.png"/>
+                    <img src="/icons/x.png"/>
                 </a>
             </nav>
             <div onClick={handleClick} className={!isActive ? styles.navbar : styles.navbar_active}></div>

@@ -1,8 +1,18 @@
+import { useRouter } from "next/navigation";
 import styles from "../Videos.module.css"
 
 
 export default function Video({project}){
-    return <div className={styles.project}>
+    const router = useRouter();
+
+    const redirect = () => {
+        const digitsArray = project?.uri.match(/\d+/g);
+        const digits = digitsArray ? digitsArray.join("") : "";
+        console.log(digits)
+        router.push('/projects/'+digits);
+    };
+
+    return <div className={styles.project} onClick={redirect}>
         <img className={styles.image} src={project?.pictures?.base_link} alt="project"></img>
         <div className={styles.info}>
             <div className={styles.rows}>

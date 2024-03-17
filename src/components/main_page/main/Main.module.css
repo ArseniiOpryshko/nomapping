@@ -38,10 +38,12 @@
     z-index: 3;
     /* overflow: hidden; */
     position: relative;
+    text-align: center;
 }
 .centralflex h1{
     text-align: center;
     font-size:80px;
+    padding-left: 3px;
 }
 .centralflex h1 span{
     text-align: center;
@@ -53,7 +55,6 @@
 .centralflex span {
     font-size: 25px;
     color: #707070;
-
 }
 .initspan{
     padding-left: 95px;

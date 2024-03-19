@@ -37,6 +37,7 @@
 }
 .project .img{
     width: 600px;
+    height: auto!important;
     cursor: pointer;
     border-radius: 6px;
     transition: 0.2s;
@@ -47,16 +48,11 @@
     margin-top: 5px;
     max-width: 600px;
 }
-/* .light1{
-    position: absolute;
-    opacity: 1;
-    width: 50%;
-    top: -40%;
-} */
+
 .light2{
     position: absolute;
     opacity: 1;
-    width: 100%;
+    width: 100%!important;
     right: 0;
     top: 50%;
     left: 50%;

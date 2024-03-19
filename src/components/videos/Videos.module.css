@@ -51,6 +51,8 @@
     justify-content: space-between;
 }
 .image{
+    width: auto !important;
+    height: auto !important;
     min-width: 480px;
     max-width: 480px;
     max-height: 270px;

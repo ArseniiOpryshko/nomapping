@@ -4,14 +4,15 @@ import TextAnimation2 from "@/configs/text_animation2";
 import styles from "./Contacts.module.css"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from "react"
+import Image from "next/image";
 
 export default function Contacts(){
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true});
     
     return <section className={styles.contacts_section} id="contacts">
-        <img className={styles.light1} alt="light_contacts" src="lights/contactlight1.png"/>
-        <img className={styles.light2} alt="light_contacts" src="lights/contactlight2.png"/>
+        <Image width={1230} height={778} className={styles.light1} alt="light_contacts1" src="/lights/contactlight1.png"/>
+        <Image width={1419} height={1807} className={styles.light2} alt="light_contacts2" src="/lights/contactlight2.png"/>
 
         <div className={styles.information} ref={ref}>
             <h3>
@@ -35,19 +36,19 @@ export default function Contacts(){
                 <h4 className={styles.column_header}>social media</h4>
                 <div className={styles.social_flex}>
                     <a className={styles.link} href="#">
-                        <img src="socials/facebook.png" alt="soc_media"/>
+                        <Image width={30} height={30} src="/socials/facebook.png" alt="soc_media1"/>
                     </a>
                     <a className={styles.link} href="#">
-                        <img src="socials/vimeo.png" alt="soc_media"/>
+                        <Image width={30} height={30} src="/socials/vimeo.png" alt="soc_media2"/>
                     </a>
                     <a className={styles.link} href="#">
-                        <img src="socials/instagram.png" alt="soc_media"/>
+                        <Image width={30} height={30} src="/socials/instagram.png" alt="soc_media3"/>
                     </a>
                     <a className={styles.link} href="#">
-                        <img src="socials/X_icon.png" alt="soc_media"/>
+                        <Image width={30} height={30} src="/socials/X_icon.png" alt="soc_media4"/>
                     </a>
                     <a className={styles.link} href="#">
-                        <img src="socials/youtube.png" alt="soc_media"/>
+                        <Image width={43} height={30} src="/socials/youtube.png" alt="soc_media5"/>
                     </a>
                 </div>
             </div>

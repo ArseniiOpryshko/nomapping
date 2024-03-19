@@ -4,6 +4,7 @@ import { useState } from "react"
 import styles from "./Header.module.css"
 import Menu from "@/components/menu/Menu";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Header({children}){
     const [isActive, setIsActive] = useState(false);
@@ -22,7 +23,7 @@ export default function Header({children}){
     return <>
         <header className={styles.header}>
             <div onClick={redirectToHome} className={styles.title}>
-                <img src="/logo.png"/>
+                <Image width={50} height={50} src="/logo.png" alt="logo"/>
                 <div className={styles.innerblock}>
                     <span className={styles.top}>
                         NOMAPPING
@@ -34,19 +35,19 @@ export default function Header({children}){
             </div>
             <nav className={styles.socials}> 
                 <a href="#">
-                    <img src="/icons/facebook.png"/>
+                    <Image width={20} height={20} src="/icons/facebook.png" alt="facebook"/>
                 </a>
                 <a href="#">
-                    <img src="/icons/vimeo.png"/>
+                    <Image width={20} height={20} src="/icons/vimeo.png" alt="vimeo"/>
                 </a>
                 <a href="#">
-                    <img src="/icons/youtube.png"/>
+                    <Image width={20} height={20} src="/icons/youtube.png" alt="youtube"/>
                 </a>
                 <a href="#">
-                    <img src="/icons/linked.png"/>
+                    <Image width={20} height={20} src="/icons/linked.png" alt="linked"/>
                 </a>
                 <a href="#">
-                    <img src="/icons/x.png"/>
+                    <Image width={20} height={20} src="/icons/x.png" alt="x"/>
                 </a>
             </nav>
             <div onClick={handleClick} className={!isActive ? styles.navbar : styles.navbar_active}></div>

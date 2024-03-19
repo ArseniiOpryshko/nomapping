@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Clients.module.css"
 
 const images1 = [
@@ -26,20 +27,20 @@ const images2 = [
 ];
 export default function Clients(){
     return <section className={styles.clients} id="clients">
-        <img className={styles.light} alt="light" src="lights/logosLight.png"/>
+        <Image className={styles.light} alt="light" src="/lights/logosLight.png" width={733} height={602}/>
 
         <div className={styles.container}>
             <div className={styles.logosslideToRight}>
                 {images1.map((image, index) => (
                     <div className={styles.blockimg} >
-                        <img className={styles.img} key={index} src={`clients/${image}`} alt={`Image ${index}`} />
+                        <Image className={styles.img} width={200} height={80} key={index} src={`/clients/${image}`} alt={`Image1`} />
                     </div>
                 ))}
             </div>
             <div className={styles.logosslideToRight}>
                 {images1.map((image, index) => (
                     <div className={styles.blockimg} >
-                        <img className={styles.img} key={index} src={`clients/${image}`} alt={`Image ${index}`} />
+                        <Image className={styles.img} width={200} height={80} key={index} src={`/clients/${image}`} alt={`Image2`} />
                     </div>
                 ))}
             </div>
@@ -49,14 +50,14 @@ export default function Clients(){
             <div className={styles.logosslideToLeft}>
                 {images2.map((image, index) => (
                     <div className={styles.blockimg} >
-                        <img className={styles.img} key={index} src={`clients/${image}`} alt={`Image ${index}`} />
+                        <Image className={styles.img} width={200} height={80} key={index} src={`/clients/${image}`} alt={`Image3`} />
                     </div>
                 ))}
             </div>
             <div className={styles.logosslideToLeft}>
                 {images2.map((image, index) => (
                     <div className={styles.blockimg} >
-                        <img className={styles.img} key={index} src={`clients/${image}`} alt={`Image ${index}`} />
+                        <Image className={styles.img} width={200} height={80} key={index} src={`/clients/${image}`} alt={`Image4`} />
                     </div>
                 ))}
             </div>

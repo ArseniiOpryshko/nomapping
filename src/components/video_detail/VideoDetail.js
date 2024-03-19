@@ -1,11 +1,11 @@
+import Image from "next/image"
 import styles from "./VideoDetail.module.css"
-
 
 export default function VideoDetail({project}){
 
     return <section className={styles.videodetail_section}>
-        <img className={styles.light1} src="/lights/detail1.png" alt="project"></img>
-        <img className={styles.light2} src="/lights/detail2.png" alt="project"></img>
+        <Image width={734} height={1004} className={styles.light1} src="/lights/detail1.png" alt="projectlight1"/>
+        <Image width={2050} height={1684} className={styles.light2} src="/lights/detail2.png" alt="projectlight2"/>
         <div className={styles.wrapper}>
             <h1 className={styles.title}>{project ? project?.name: "Loading..."}</h1>
             {!project ? 

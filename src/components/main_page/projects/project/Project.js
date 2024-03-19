@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion"
 import styles from "../Projects.module.css"
+import Image from "next/image"
 
 
 export default function Project({project, index}){
@@ -17,7 +18,7 @@ export default function Project({project, index}){
             }
         }}
         viewport={{ once: true }}>
-        <img className={styles.img} src={project?.pictures?.base_link} alt="project"/>
+        <Image width={600} height={337} className={styles.img} src={project?.pictures?.base_link} alt="project"/>
         <p className={styles.name}>{project?.name}</p>
     </motion.div>
             

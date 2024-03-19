@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import styles from "../Videos.module.css"
+import Image from "next/image";
 
 
 export default function Video({project}){
@@ -13,7 +14,7 @@ export default function Video({project}){
     };
 
     return <div className={styles.project} onClick={redirect}>
-        <img className={styles.image} src={project?.pictures?.base_link} alt="project"></img>
+        <Image width={480} height={270} className={styles.image} src={project?.pictures?.base_link} alt="project"/>
         <div className={styles.info}>
             <div className={styles.rows}>
                 <h3 className={styles.name}>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Videos.module.css"
 import Video from "./video/Video"
 import axios from "axios";
+import Image from "next/image";
   
 
 export default function Videos(){
@@ -49,8 +50,8 @@ export default function Videos(){
     }, [paging]);
     
     return <section className={styles.projects_section}>
-            <img className={styles.light2} src="/lights/projecstlight4.png" alt="project"></img>
-            <img className={styles.light} src="/lights/projecstlight.png" alt="project"></img>
+            <Image width={613} height={372} className={styles.light2} src="/lights/projecstlight4.png" alt="project"/>
+            <Image width={1338} height={1352} className={styles.light} src="/lights/projecstlight.png" alt="project"/>
             <h2 className={styles.projh}>PROJECTS</h2>
             <div className={styles.projects}>
                 {projects.map((item, i) => (

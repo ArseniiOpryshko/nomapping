@@ -1,6 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import styles from "./Menu.module.css"
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Menu({isActive, handleClick}){
     const controls = useAnimation();
@@ -16,9 +17,9 @@ export default function Menu({isActive, handleClick}){
         transition={{ duration: 0.3 }}
       >
         <div className={styles.content}>
-            <img className={styles.light1} alt="light1" src="/lights/menu1.png"/>
-            <img className={styles.light2} alt="light2" src="/lights/menu2.png"/>
-            <img className={styles.light3} alt="light3" src="/lights/menu3.png"/>
+            <Image width={843} height={624} className={styles.light1} alt="light1" src="/lights/menu1.png"/>
+            <Image width={928} height={324} className={styles.light2} alt="light2" src="/lights/menu2.png"/>
+            <Image width={594} height={507} className={styles.light3} alt="light3" src="/lights/menu3.png"/>
 
 
             <div className={styles.flex_column}>

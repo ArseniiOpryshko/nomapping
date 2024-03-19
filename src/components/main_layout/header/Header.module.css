@@ -21,7 +21,8 @@
     cursor: pointer;
 }
 .title img{
-    height: 50px;
+    width: 45px; 
+    height: auto;
 }
 .title .innerblock{
     display: flex;

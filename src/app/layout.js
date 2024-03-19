@@ -5,11 +5,11 @@ import MainLayout from "@/components/main_layout/MainLayout";
 const inter = Work_Sans({  styles: "300,400,500,600,700,800", subsets: ["latin"] });
 
 export const metadata = {
-  title: "Студія моушен дизайну та інтерактивного медіа",
-  description: "NoMapping 2024 STUDIO OF MOTION DESIGN AND INTERACTIVE MEDIA",
-  icons: {
-    icon: "logo.png",
+  title: {
+    default: "Nomapping",
+    template: "%s - Nomapping"
   },
+  description: "NoMapping 2024 STUDIO OF MOTION DESIGN AND INTERACTIVE MEDIA",
 };
 
 export default function RootLayout({ children }) {

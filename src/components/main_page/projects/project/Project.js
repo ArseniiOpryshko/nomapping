@@ -2,10 +2,19 @@
 import { motion } from "framer-motion"
 import styles from "../Projects.module.css"
 import Image from "next/image"
+import { useRouter } from "next/navigation";
 
 
 export default function Project({project, index}){
-    return <motion.div className={styles.project}
+    const router = useRouter();
+
+    const redirect = () => {
+        const digitsArray = project?.uri.match(/\d+/g);
+        const digits = digitsArray ? digitsArray.join("") : "";
+        router.push('/projects/'+digits);
+    };
+
+    return <motion.div onClick={redirect} className={styles.project}
         initial={{
             opacity: 0,
             x: index % 2 === 0 ? 50 : -50

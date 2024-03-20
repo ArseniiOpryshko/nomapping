@@ -46,7 +46,7 @@ export default function Services(){
                     <p>Cutting-edge multimedia space, that immerse people into a new reality with a unique atmosphere, where people can interact with characters and even create their ones. Interactive installations are used in design of exhibition space, conferences, concert halls and shows.</p>
                 </div>
             </div>
-            <a className={styles.bttn} href="#">
+            <a className={styles.bttn} href="/nomapping.pdf">
                 ALL SERVICES
             </a>
         </div>

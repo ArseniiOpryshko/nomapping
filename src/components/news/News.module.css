@@ -1,0 +1,354 @@
+.news_section{
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 120px;
+}
+.title{
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.container{
+    width: 1600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.116);
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.top{
+    grid-column: span 3;
+    height: 600px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.big_block{
+    grid-column: span 2;
+    grid-row: span 2;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+.right_block{
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+.small_block{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+.big_block .name{
+    font-size: 40px;
+}
+.big_block .date{
+    font-size: 20px;
+}
+.right_block .name{
+    font-size: 30px;
+}
+.right_block .date{
+    font-weight: 500;
+    font-size: 16px;
+}
+.big_block .img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+.small_block .img{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+}
+.big_block .overlay, .small_block .overlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 12px;
+}
+.bottom_block{
+    position: relative;
+    cursor: pointer;
+}
+.bottom_block img{
+    margin-top: 10px;
+    width: 100%;
+    height: 210px;
+}
+.bottom_block .overlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+.grid4{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+.bottom_block{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+.bottom_block, .bottom_block .img{
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.grid4 .name{
+    font-size: 20px;    
+    color: white;
+}
+.grid4 .date{
+    font-weight: 500;
+    font-size: 15px;    
+    color: white;
+}
+.loader {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 40px 0;
+  }
+  
+  .inner_one, .inner_two, .inner_three {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner_one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid #EFEFFA;
+  }
+  
+  .inner_two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid #EFEFFA;
+  }
+  
+  .inner_three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid #EFEFFA;
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+
+@media screen and (max-width: 1650px) {
+    .container{
+        width: 97%;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .top{
+        height: 400px;
+    }
+    .big_block .img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .small_block .img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .grid4{
+        grid-template-columns: 1fr 1fr;   
+    }
+}
+@media screen and (max-width: 850px) {
+    .top{
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .right_block{
+        width: 100%;
+        flex-direction: row;
+        grid-row: span 1;
+        margin-top: 10px;
+        height: 200px;
+    }
+    .small_block{
+        height: 100%;
+    }
+    .big_block {
+        height: 300px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .big_block {
+        height: 210px;
+    }
+    .big_block .name{
+        font-size: 20px;
+    }
+    .big_block .description{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .right_block .name{
+        font-size: 20px;
+    }
+    .right_block .description{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .right_block{
+        flex-direction: column;
+        height: auto;
+    }
+    .grid4{
+        grid-template-columns: 1fr;   
+    }
+    .top{
+        height: 630px;
+        margin-bottom: 20px;
+    }
+    .small_block{
+        height: 210px;
+    }
+    .title{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .title{
+        font-size: 25px;
+    }
+    .top {
+        display: block;
+        height: auto;
+        margin-bottom: 0;
+        gap: 10px;
+    }
+
+    .big_block{
+        height: 200px;
+        grid-row: span 1;
+    }
+    .right_block{
+        margin-top:0;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        gap: 10px;
+    }
+    .small_block{
+        height: 200px;
+    }
+    .img{
+        height: auto!important;
+    }
+    .name{
+        font-size: calc(7px + 16 * (100vw / 370))!important;
+    }
+    .date{
+        font-size: calc(3px + 15 * (100vw / 370))!important;
+    }
+    .grid4{
+        gap: 10px;
+    }
+    .container{
+        padding: 5px;
+        gap: 0;
+    }
+}
+@media screen and (max-width: 315px) {
+    .title{
+        font-size: 18px;
+    }
+    .small_block{
+        height: 160px;
+    }
+    .big_block{
+        height: 160px;
+        margin-bottom: 10px;
+    }
+    .right_block{
+        height: auto;
+    }
+}
+@media screen and (max-width: 210px) {
+
+    .small_block{
+        height: 110px;
+    }
+    .big_block{
+        height: 110px;
+    }
+}

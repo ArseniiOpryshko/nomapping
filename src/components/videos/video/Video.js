@@ -9,7 +9,6 @@ export default function Video({project}){
     const redirect = () => {
         const digitsArray = project?.uri.match(/\d+/g);
         const digits = digitsArray ? digitsArray.join("") : "";
-        console.log(digits)
         router.push('/projects/'+digits);
     };
 

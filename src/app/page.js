@@ -3,6 +3,7 @@ import Clients from "@/components/main_page/clients/Clients";
 import Contacts from "@/components/main_page/contacts/Contacts";
 import Glitch from "@/components/main_page/glitch/Glitch";
 import MainSection from "@/components/main_page/main/Main";
+import News from "@/components/main_page/news/News";
 import Projects from "@/components/main_page/projects/Projects";
 import Services from "@/components/main_page/services/Services";
 
@@ -14,6 +15,7 @@ export default function Home() {
     <Services/>
     <Glitch/>
     <Projects/>
+    <News/>
     <Contacts/>
   </main>
 }

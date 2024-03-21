@@ -5,6 +5,7 @@ import axios from "axios"
 import CertainNews from "./certainNews/CertainNews";
 import { parseXmlToJson } from "@/configs/parseXmlToJson";
 import { extractImageSrcFromHTML } from "@/configs/extractImageSrcFromHTML";
+import Image from "next/image";
 
 export default function News(){
     const [items, setItems] = useState([]);
@@ -24,6 +25,8 @@ export default function News(){
     }, [])
 
     return <section className={styles.news_section}>
+        <Image width={734} height={875} className={styles.light1} src="/lights/newslight1.png" alt="newslight1"/>
+        <Image width={528} height={560} className={styles.light2} src="/lights/newslight2.png" alt="newslight2"/>
         <h2 className={styles.title}>
             Our Latest news
         </h2>

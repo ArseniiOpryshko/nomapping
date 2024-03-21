@@ -1,20 +1,44 @@
 'use client'
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import styles from "./NewsDetail.module.css"
+import axios from "axios";
+import { parseXmlToJson } from "@/configs/parseXmlToJson";
+import Image from "next/image";
 
-export default function NewsDetail({item}){
+export default function NewsDetail({name}){
+    const [item, setItem] = useState();
+
     useEffect(()=>{
-        console.log(item)
+        const getData = async () => { 
+            const resp = await axios.get('https://corsproxy.io/?https://medium.com/feed/@arsephantom');
+            const jsonData = await parseXmlToJson(resp.data);
+            const decodedName = decodeURI(name);
+            const item = jsonData.rss.channel[0].item.find(obj => obj.title[0] === decodedName)
+            
+            setItem(item);     
+        };
+        getData();      
     }, [])
+    console.log(item)
 
     return <section className={styles.newsdetail_section}>
-        <div className={styles.container}>
-            <h2 className={styles.name}>
-                {item?.title[0]}
-            </h2>
-            <div className={styles.content} 
-                dangerouslySetInnerHTML={{ __html: item ? item['content:encoded']:'' }}>
+        <Image width={720} height={1344} className={styles.light1} src="/lights/certainnewslight1.png" alt="newslight2"/>
+        <Image width={528} height={560} className={styles.light2} src="/lights/certainnewslight2.png" alt="newslight2"/>
+
+        {item ? <div className={styles.container}>
+                <h2 className={styles.name}>
+                    {item?.title[0]}
+                </h2>
+                <div className={styles.content} 
+                    dangerouslySetInnerHTML={{ __html: item ? item['content:encoded']:'' }}>
+                </div>
+            </div> 
+            :
+            <div className={styles.loader}>
+                <div className={styles.inner_one}></div>
+                <div className={styles.inner_two}></div>
+                <div className={styles.inner_three}></div>
             </div>
-        </div>
+        }
     </section>
 }

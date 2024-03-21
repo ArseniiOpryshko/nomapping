@@ -6,7 +6,7 @@ import Menu from "@/components/menu/Menu";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Header({children}){
+export default function Header({children, trans}){
     const [isActive, setIsActive] = useState(false);
     const router = useRouter();
 
@@ -29,7 +29,7 @@ export default function Header({children}){
                         NOMAPPING
                     </span>
                     <span className={styles.bottom}>
-                        Creative Design Studio
+                        {trans.headerText}
                     </span>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default function Header({children}){
             <div onClick={handleClick} className={!isActive ? styles.navbar : styles.navbar_active}></div>
         </header>
         
-        {isActive ? <Menu isActive={isActive} handleClick={handleClick}/> : null} 
+        {isActive ? <Menu trans={trans.translates} isActive={isActive} handleClick={handleClick}/> : null} 
         {children}
     </>
 }

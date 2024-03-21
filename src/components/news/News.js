@@ -6,10 +6,12 @@ import CertainNews from "./certainNews/CertainNews";
 import { parseXmlToJson } from "@/configs/parseXmlToJson";
 import { extractImageSrcFromHTML } from "@/configs/extractImageSrcFromHTML";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-export default function News(){
+export default function News({trans}){
     const [items, setItems] = useState([]);
-
+    const router = usePathname();
+    
     useEffect(()=>{
         const fetchData2 = async () =>{
             // const response = await axios.get(`https://dev.to/api/articles?username=phaha`);
@@ -28,7 +30,7 @@ export default function News(){
         <Image width={734} height={875} className={styles.light1} src="/lights/newslight1.png" alt="newslight1"/>
         <Image width={528} height={560} className={styles.light2} src="/lights/newslight2.png" alt="newslight2"/>
         <h2 className={styles.title}>
-            Our Latest news
+            {trans}
         </h2>
         {!items[0] ?  
             <div className={styles.loader}>
@@ -39,7 +41,7 @@ export default function News(){
         : 
         <div className={styles.container}>
                 <div className={styles.top}>
-                    <a className={styles.big_block} href={'/news/'+items[0]?.title[0]}>
+                    <a className={styles.big_block} href={`${router}/`+items[0]?.title[0]}>
                         <img className={styles.img} src={items[0] ? extractImageSrcFromHTML(items[0]['content:encoded']): ''}/>
                         <div className={styles.overlay}>
                             <h3 className={styles.name}>
@@ -51,7 +53,7 @@ export default function News(){
                         </div>
                     </a>
                     <div className={styles.right_block}>
-                        <a className={styles.small_block} href={'/news/'+items[1]?.title[0]}>
+                        <a className={styles.small_block} href={`${router}/`+items[1]?.title[0]}>
                             <img className={styles.img} src={items[1] ?extractImageSrcFromHTML(items[1]['content:encoded']): ''}/>
                             <div className={styles.overlay}>
                                 <h3 className={styles.name}>
@@ -62,7 +64,7 @@ export default function News(){
                                 </h4>
                             </div>
                         </a>
-                        <a className={styles.small_block} href={'/news/'+items[2]?.title[0]}>
+                        <a className={styles.small_block} href={`${router}/`+items[2]?.title[0]}>
                             <img className={styles.img} src={items[2] ?extractImageSrcFromHTML(items[2]['content:encoded']): ''}/>
                             <div className={styles.overlay}>
                                 <h3 className={styles.name}>

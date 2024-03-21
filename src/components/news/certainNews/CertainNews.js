@@ -1,9 +1,12 @@
 
 import { extractImageSrcFromHTML } from "@/configs/extractImageSrcFromHTML"
 import styles from "../News.module.css"
+import { usePathname } from "next/navigation";
 
 export default function CertainNews({item}){
-    return <a className={styles.bottom_block} href={'/news/'+item?.title[0]}> 
+    const router = usePathname();
+
+    return <a className={styles.bottom_block} href={`${router}/`+item?.title[0]}> 
         <img className={styles.img} src={extractImageSrcFromHTML(item['content:encoded'])}/>
         <div className={styles.overlay}>
             <h3 className={styles.name}>

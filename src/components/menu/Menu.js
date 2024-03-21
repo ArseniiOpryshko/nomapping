@@ -1,15 +1,27 @@
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import styles from "./Menu.module.css"
-import { useEffect } from "react";
+import { useEffect, useTransition } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-export default function Menu({isActive, handleClick}){
+export default function Menu({trans, isActive, handleClick}){
+
     const controls = useAnimation();
+    const [isPending, startTransition] = useTransition();
+    const router = useRouter();
+
     useEffect(() => {
         if (isActive) {
           controls.start({ opacity: 1, y: 0, transition: { staggerChildren: 0.1 } });
         }
       }, [isActive, controls]);
+
+    const languageHandler = (e) =>{
+        const locale = e.target.value;
+        startTransition(()=>{
+            router.replace(`/${locale}`)
+        })
+    }
 
     return <motion.section className={styles.menu_section}
         initial={{ opacity: 0, y: 50 }}
@@ -24,16 +36,16 @@ export default function Menu({isActive, handleClick}){
 
             <div className={styles.flex_column}>
                 <div className={styles.languages}>
-                    <button className={styles.language}>УКР</button>
-                    <button className={styles.language}>ENG</button>
+                    <button onClick={languageHandler} value={'ua'} className={styles.language}>УКР</button>
+                    <button onClick={languageHandler} value={'en'} className={styles.language}>ENG</button>
                 </div>
                 <div className={styles.routes}>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#home" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>HOME</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#clients" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>CLIENTS</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#aboutus" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>ABOUT US</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>SERVICE</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#projects" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>PROJECTS</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#contacts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>CONTACTS</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#home" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>{trans[0]}</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#clients" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>{trans[1]}</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#aboutus" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>{trans[2]}</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>{trans[3]}</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#projects" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>{trans[4]}</motion.a>
+                    <motion.a onClick={handleClick} className={styles.route} href="/#contacts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>{trans[5]}</motion.a>
                 </div>
                 <nav className={styles.socials}>
                     <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="/icons/facebook.png" alt="Facebook" /></motion.a>

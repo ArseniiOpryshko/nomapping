@@ -7,7 +7,7 @@ import axios from "axios";
 import Image from "next/image";
   
 
-export default function Videos(){
+export default function Videos({trans}){
     const [projects, setProjects] = useState([]);
     const containerRef = useRef(null);
     const [paging, setPaging] = useState([]);
@@ -52,7 +52,7 @@ export default function Videos(){
     return <section className={styles.projects_section}>
             <Image width={613} height={372} className={styles.light2} src="/lights/projecstlight4.png" alt="project"/>
             <Image width={1338} height={1352} className={styles.light} src="/lights/projecstlight.png" alt="project"/>
-            <h2 className={styles.projh}>PROJECTS</h2>
+            <h2 className={styles.projh}>{trans}</h2>
             <div className={styles.projects}>
                 {projects.map((item, i) => (
                     <Video key={i} project={item} index={i} />

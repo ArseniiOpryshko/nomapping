@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import TextAnimation2 from "@/configs/text_animation2";
 
 
-export default function AboutUs(){
+export default function AboutUs({trans}){
     const ref = useRef(null);
     const isInView = useInView(ref, {amount: 0.3, once: true});
 
@@ -18,10 +18,10 @@ export default function AboutUs(){
     return <section className={styles.aboutus_section} id="aboutus">
         <div className={styles.titleblock}>
             <h4 className={styles.titleh4} ref={reftitle2}>
-                <TextAnimation2 isInView={isInView2} text="WHAT WE DO"/>
+                <TextAnimation2 isInView={isInView2} text={trans[0]}/>
             </h4>
             <h2 className={styles.titleh2} ref={reftitle3}>
-                <TextAnimation2 isInView={isInView3} text="WE CREATE VISUAL SHOW, INTERACTIVE INSTALLATIONS AND MOTION DESIGN."/>
+                <TextAnimation2 isInView={isInView3} text={trans[1]}/>
             </h2>
         </div>
         <div className={styles.con}  ref={ref}>
@@ -33,9 +33,9 @@ export default function AboutUs(){
                     transition={{ type: 'linear', duration: 0.5 }}
 
                 >
-                    Our work is a synergy of creation, design, engineering and marketing. We are the experts in creation of <span className={styles.underlind}>unique visual images</span>. Interactive installations, light show, video presentations and state-of-the-art promotional products.<br/><br/>The team of the best specialists — producers, art-directors, engineers and marketers — will realize your project, using <span className={styles.underlind}>the freshest ideas and modern technologies</span>.
+                    {trans[2]}<span className={styles.underlind}>{trans[3]}</span>{trans[4]}<br/><br/>{trans[5]}<span className={styles.underlind}>{trans[6]}</span>.
                 <a className={styles.bttn} href="#services">
-                    Our services    
+                    {trans[7]}   
                 </a>
                 </motion.p>
                 

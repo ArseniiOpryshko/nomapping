@@ -4,9 +4,12 @@ import styles from "./Projects.module.css"
 import Project from "./project/Project"
 import axios from "axios";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+// import { useRouter } from 'next/router';
 
-export default function Projects(){
+export default function Projects({trans}){
     const [projects, setProjects] = useState([]);
+    const router = usePathname();
 
     useEffect(()=>{
         const fetchData = async () =>{
@@ -23,7 +26,7 @@ export default function Projects(){
     return <section className={styles.projects_section} id="projects">
         <Image width={1384} height={1121} className={styles.light2} alt="light_project" src="/lights/projectlight.png"/>
 
-        <h4 className={styles.title}>What have we done</h4>
+        <h4 className={styles.title}>{trans[0]}</h4>
         <div className={styles.pallete}>
             {projects[0] ? projects.map((item, i) => (
                 <Project key={i} project={item} index={i} />
@@ -36,8 +39,8 @@ export default function Projects(){
             }
         </div>
         <div className={styles.btnns}>
-            <a className={styles.btn} href="/projects">All projects</a>
-            <a className={styles.btn} href="#contacts">Order new project</a>
+            <a className={styles.btn} href={`${router}/projects`}>{trans[1]}</a>
+            <a className={styles.btn} href="#contacts">{trans[2]}</a>
         </div>
     </section>
 }

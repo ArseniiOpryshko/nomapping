@@ -57,16 +57,18 @@
     color: #707070;
 }
 .initspan{
-    padding-left: 95px;
+    /* padding-left: 95px; */
     position: absolute;
     bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
     font-weight: bold;
     font-size: 25px;
 
 }
 @media screen and (max-width: 1000px) {
     .initspan{
-        padding-left: 7%;
+        /* padding-left: 7%; */
         position: absolute;
         bottom: -5px;
     

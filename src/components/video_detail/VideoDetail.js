@@ -1,7 +1,9 @@
 import Image from "next/image"
 import styles from "./VideoDetail.module.css"
+import { useTranslations } from "next-intl";
 
 export default function VideoDetail({project}){
+    const trans = useTranslations('ProjectPage');
 
     return <section className={styles.videodetail_section}>
         <Image width={734} height={1004} className={styles.light1} src="/lights/detail1.png" alt="projectlight1"/>
@@ -19,9 +21,9 @@ export default function VideoDetail({project}){
             <div className={styles.video_block} 
                 dangerouslySetInnerHTML={{ __html: project?.embed.html }}>
             </div>
-            <h2 className={styles.about}>ABOUT PROJECT</h2>
+            <h2 className={styles.about}>{trans('about')}</h2>
             <p className={styles.description}>{project?.description?.split(/https?:\/\/\S+/)[0]}</p>
-            <a className={styles.bttn} href="/#contacts">Order a project</a>
+            <a className={styles.bttn} href="/#contacts">{trans('order')}</a>
         </div>
     </section>
 

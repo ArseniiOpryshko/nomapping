@@ -1,15 +1,16 @@
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "../Videos.module.css"
 import Image from "next/image";
 
 
 export default function Video({project}){
     const router = useRouter();
+    const pathName = usePathname();
 
     const redirect = () => {
         const digitsArray = project?.uri.match(/\d+/g);
         const digits = digitsArray ? digitsArray.join("") : "";
-        router.push('/projects/'+digits);
+        router.push(pathName+'/'+digits);
     };
 
     return <div className={styles.project} onClick={redirect}>

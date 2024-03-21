@@ -1,4 +1,5 @@
 import Videos from "@/components/videos/Videos"
+import { useTranslations } from "next-intl";
 
 export const metadata = {
     title: "Projects",
@@ -6,5 +7,7 @@ export const metadata = {
 }
 
 export default function Projects() {
-    return <Videos/>
+    const trans = useTranslations('ProjectsPage');
+
+    return <Videos trans={trans('headerText')}/>
 }

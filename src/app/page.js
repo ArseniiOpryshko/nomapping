@@ -1,21 +1,5 @@
-import AboutUs from "@/components/main_page/aboutus/AboutUs";
-import Clients from "@/components/main_page/clients/Clients";
-import Contacts from "@/components/main_page/contacts/Contacts";
-import Glitch from "@/components/main_page/glitch/Glitch";
-import MainSection from "@/components/main_page/main/Main";
-import News from "@/components/main_page/news/News";
-import Projects from "@/components/main_page/projects/Projects";
-import Services from "@/components/main_page/services/Services";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return <main>
-    <MainSection/>
-    <Clients/>
-    <AboutUs/>
-    <Services/>
-    <Glitch/>
-    <Projects/>
-    <News/>
-    <Contacts/>
-  </main>
+export default function RootPage() {
+    redirect('/en');
 }

@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from "react"
 import Image from "next/image";
 
-export default function Contacts(){
+export default function Contacts({trans}){
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true});
     
@@ -16,24 +16,24 @@ export default function Contacts(){
 
         <div className={styles.information} ref={ref}>
             <h3>
-                <TextAnimation2 isInView={isInView} text="Contacts"/>
+                <TextAnimation2 isInView={isInView} text={trans[0]}/>
             </h3>
             <div className={styles.columns}>
                 <div className={styles.column}>
-                    <h5 className={styles.column_header}>MANAGER</h5>
+                    <h5 className={styles.column_header}>{trans[1]}</h5>
                     <p className={styles.data}>tony@nomapping.com</p>
                 </div>
                 <div className={styles.column}>
-                    <h5 className={styles.column_header}>LOCATION</h5>
-                    <p className={styles.data}>Ukraine, Kiev, Lesi Ukrainky Blvd, 11, office 104</p>
+                    <h5 className={styles.column_header}>{trans[2]}</h5>
+                    <p className={styles.data}>{trans[3]}</p>
                 </div>
                 <div className={styles.column}>
-                    <h5 className={styles.column_header}>OFFICE</h5>
+                    <h5 className={styles.column_header}>{trans[4]}</h5>
                     <p className={styles.data}>office@nomapping.com</p>
                 </div>
             </div>
             <div className={styles.social_medias}>
-                <h4 className={styles.column_header}>social media</h4>
+                <h4 className={styles.column_header}>{trans[5]}</h4>
                 <div className={styles.social_flex}>
                     <a className={styles.link} href="#">
                         <Image width={30} height={30} src="/socials/facebook.png" alt="soc_media1"/>

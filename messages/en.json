@@ -1,0 +1,60 @@
+{
+    "IndexPage": {   
+      "dontSupport": "Your browser does not support the video tag.",
+      "title": "STUDIO OF MOTION DESIGN AND INTERACTIVE MEDIA",
+      
+      "header1": "WHAT WE DO",
+      "header2": "WE CREATE VISUAL SHOW, INTERACTIVE INSTALLATIONS AND MOTION DESIGN.",
+      "textPart1": "Our work is a synergy of creation, design, engineering and marketing. We are the experts in creation of ",
+      "textUnder1": "unique visual images",
+      "textPart2": ". Interactive installations, light show, video presentations and state-of-the-art promotional products",
+      "textPart3": "The team of the best specialists — producers, art-directors, engineers and marketers — will realize your project, using ",
+      "textUnder2": "the freshest ideas and modern technologies",
+      "button": "Our services",
+      
+      "service1":"3D-mapping",
+      "serviceInfo1":"It is a bright light show projecting at the facade of the building. 3D mapping allows creating optical illusion, to give depth to various subjects, to transform a shape of the building and to create realistic images and gorgeous visual images for the brightest events.",
+      "service2":"VR-animation",
+      "serviceInfo2":"Video-animation, created for watching in VR headset. It allows to show any idea, concept or space that did not existed before. It gives a great immersion, that hepls to generate WOW-effect and grow sales.",
+      "service3":"Motion design",
+      "serviceInfo3":"Motion design helps to tell your story in a best way, supporting it with high quality audio accompaniment and bright special effects. Advertisement, presentation videos, graphic images will keep your product unique, inspirational and attractive.",
+      "service4":"Interactive setup",
+      "serviceInfo4":"Cutting-edge multimedia space, that immerse people into a new reality with a unique atmosphere, where people can interact with characters and even create their ones. Interactive installations are used in design of exhibition space, conferences, concert halls and shows.",
+      "serviceBttn":"ALL SERVICES",
+      "headerService":"ALL SERVICES",
+
+      "headerProjects":"What have we done",
+      "projectBttn1":"All projects",
+      "projectBttn2":"Order new project",
+
+      "newsBttn": "Check out our news",
+
+      "headerContact": "Contacts",
+      "manager": "MANAGER",
+      "location": "LOCATION",
+      "adress": "Ukraine, Kiev, Lesi Ukrainky Blvd, 11, office 104",
+      "office": "OFFICE",
+      "socials": "social media"
+
+    },
+    "MenuPage": {
+      "headerText": "Creative Design Studio",
+      "home": "HOME",
+      "clients": "CLIENTS",
+      "aboutUs": "ABOUT US",
+      "servece": "SERVICE",
+      "projects": "PROJECTS",
+      "contacts": "CONTACTS"
+    },
+    "ProjectsPage":{
+      "headerText": "PROJECTS"
+
+    },
+    "ProjectPage":{
+      "about": "ABOUT PROJECT",
+      "order": "Order a project"
+    },
+    "NewsPage": {
+      "headerText": "OUR LATEST NEWS"
+    }
+  }

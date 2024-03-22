@@ -34,19 +34,19 @@ export default function Header({children, trans}){
                 </div>
             </div>
             <nav className={styles.socials}> 
-                <a href="#">
+                <a href="https://www.facebook.com/NoMapping" target="_blank">
                     <Image width={20} height={20} src="/icons/facebook.png" alt="facebook"/>
                 </a>
-                <a href="#">
+                <a href="https://vimeo.com/nomapping" target="_blank">
                     <Image width={20} height={20} src="/icons/vimeo.png" alt="vimeo"/>
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/c/Nomapping" target="_blank">
                     <Image width={20} height={20} src="/icons/youtube.png" alt="youtube"/>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/nomapping/about/" target="_blank">
                     <Image width={20} height={20} src="/icons/linked.png" alt="linked"/>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/NoMapping" target="_blank">
                     <Image width={20} height={20} src="/icons/x.png" alt="x"/>
                 </a>
             </nav>

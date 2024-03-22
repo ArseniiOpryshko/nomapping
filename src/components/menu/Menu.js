@@ -48,11 +48,11 @@ export default function Menu({trans, isActive, handleClick}){
                     <motion.a onClick={handleClick} className={styles.route} href="/#contacts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>{trans[5]}</motion.a>
                 </div>
                 <nav className={styles.socials}>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="/icons/facebook.png" alt="Facebook" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.9 }}> <img src="/icons/vimeo.png" alt="Vimeo" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1 }}> <img src="/icons/youtube.png" alt="YouTube" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.1 }}> <img src="/icons/linked.png" alt="LinkedIn" /></motion.a>
-                    <motion.a href="#" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.2 }}> <img src="/icons/x.png" alt="X" /></motion.a>
+                    <motion.a target="_blank" href="https://www.facebook.com/NoMapping" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="/icons/facebook.png" alt="Facebook" /></motion.a>
+                    <motion.a target="_blank" href="https://vimeo.com/nomapping" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.9 }}> <img src="/icons/vimeo.png" alt="Vimeo" /></motion.a>
+                    <motion.a target="_blank" href="https://www.youtube.com/c/Nomapping" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1 }}> <img src="/icons/youtube.png" alt="YouTube" /></motion.a>
+                    <motion.a target="_blank" href="https://www.linkedin.com/company/nomapping/about/" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.1 }}> <img src="/icons/linked.png" alt="LinkedIn" /></motion.a>
+                    <motion.a target="_blank" href="https://twitter.com/NoMapping" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 1.2 }}> <img src="/icons/x.png" alt="X" /></motion.a>
                 </nav>
             </div>
         </div>

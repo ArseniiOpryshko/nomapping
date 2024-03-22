@@ -5,13 +5,12 @@ import styles from "./Videos.module.css"
 import Video from "./video/Video"
 import axios from "axios";
 import Image from "next/image";
-  
 
+  
 export default function Videos({trans}){
     const [projects, setProjects] = useState([]);
     const containerRef = useRef(null);
     const [paging, setPaging] = useState([]);
-
 
     const fetchData = async (url) => {
         const resp = await axios.get(url, {
@@ -20,7 +19,6 @@ export default function Videos({trans}){
           }
         });
 
-        console.log(resp)
         if (projects.length > 0) {
             setProjects(prevProjects => [...prevProjects, ...resp.data.data]);
         } else {

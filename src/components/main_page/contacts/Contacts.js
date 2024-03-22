@@ -35,19 +35,22 @@ export default function Contacts({trans}){
             <div className={styles.social_medias}>
                 <h4 className={styles.column_header}>{trans[5]}</h4>
                 <div className={styles.social_flex}>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} target="_blank" href="https://www.linkedin.com/company/nomapping/about/">
+                        <Image width={43} height={30} src="/socials/linked.png" alt="soc_media6"/>
+                    </a>
+                    <a className={styles.link} href="https://www.facebook.com/NoMapping" target="_blank">
                         <Image width={30} height={30} src="/socials/facebook.png" alt="soc_media1"/>
                     </a>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} href="https://vimeo.com/nomapping" target="_blank">
                         <Image width={30} height={30} src="/socials/vimeo.png" alt="soc_media2"/>
                     </a>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} href="https://www.instagram.com/nomapping" target="_blank">
                         <Image width={30} height={30} src="/socials/instagram.png" alt="soc_media3"/>
                     </a>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} href="https://twitter.com/NoMapping" target="_blank">
                         <Image width={30} height={30} src="/socials/X_icon.png" alt="soc_media4"/>
                     </a>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} target="_blank" href="https://www.youtube.com/c/Nomapping">
                         <Image width={43} height={30} src="/socials/youtube.png" alt="soc_media5"/>
                     </a>
                 </div>

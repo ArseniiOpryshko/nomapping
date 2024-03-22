@@ -49,6 +49,13 @@
     margin: 100px 0 ;
     z-index: 2;
 }
+.link:nth-child(1) {
+    cursor: pointer;
+}
+.link:nth-child(1) img{
+    height: 30px;
+    width: 30px;
+}
 .link {
     cursor: pointer;
 }

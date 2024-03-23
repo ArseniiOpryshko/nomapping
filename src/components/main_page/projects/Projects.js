@@ -4,7 +4,7 @@ import styles from "./Projects.module.css"
 import Project from "./project/Project"
 import axios from "axios";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 // import { useRouter } from 'next/router';
 
 export default function Projects({trans}){

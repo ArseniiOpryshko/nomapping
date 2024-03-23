@@ -17,5 +17,10 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.69",
+    "typescript": "5.4.3"
   }
 }

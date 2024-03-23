@@ -2,16 +2,17 @@
 import { motion } from "framer-motion"
 import styles from "../Projects.module.css"
 import Image from "next/image"
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 
 export default function Project({project, index}){
     const router = useRouter();
+    const pathName = usePathname();
 
     const redirect = () => {
         const digitsArray = project?.uri.match(/\d+/g);
         const digits = digitsArray ? digitsArray.join("") : "";
-        router.push('/projects/'+digits);
+        router.push(pathName+'/projects/'+digits);
     };
 
     return <motion.div onClick={redirect} className={styles.project}

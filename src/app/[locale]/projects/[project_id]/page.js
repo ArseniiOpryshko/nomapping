@@ -1,5 +1,6 @@
 import VideoDetail from "@/components/video_detail/VideoDetail";
 import axios from "axios";
+import { notFound } from "next/navigation";
 
 
 const cache = {};
@@ -8,6 +9,8 @@ const getData = async (project_id) => {
     if (cache[project_id]) {
         return cache[project_id];
     } else {
+        
+    try {
         const video = await axios.get(`https://api.vimeo.com/videos/${project_id}`, {
             headers: {
                 Authorization: 'Bearer 356b932c2a2e22b86926fa64a675540d'
@@ -15,6 +18,9 @@ const getData = async (project_id) => {
         });
         cache[project_id] = video.data;
         return video.data;
+    } catch (error) {
+        notFound();
+    }
     }
 };
 

@@ -1,13 +1,17 @@
 import Videos from "@/components/videos/Videos"
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-    title: "Projects",
-    description: "Explore the full list of our projects and works presented on our website. Discover our latest advances, experiments and work covering a wide range of topics and technologies",
+export async function generateMetadata({params: {locale}}) {
+    const t = await getTranslations({locale, namespace: 'Metadata'});
+
+    return {
+        title: t('projects_h'),
+        description: t('projects_desc'),
+    };
 }
 
-export default function Projects() {
-    const trans = useTranslations('ProjectsPage');
+export default async function Projects() {
+    const trans = await getTranslations('ProjectsPage');
 
     return <Videos trans={trans('headerText')}/>
 }

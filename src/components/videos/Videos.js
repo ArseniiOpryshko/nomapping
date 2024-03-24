@@ -18,7 +18,7 @@ export default function Videos({trans}){
             Authorization: 'Bearer 356b932c2a2e22b86926fa64a675540d'
           }
         });
-console.log(resp)
+
         if (projects.length > 0) {
             setProjects(prevProjects => [...prevProjects, ...resp.data.data]);
         } else {

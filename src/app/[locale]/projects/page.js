@@ -1,7 +1,8 @@
 import Videos from "@/components/videos/Videos"
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({params: {locale}}) {
+    unstable_setRequestLocale(locale);
     const t = await getTranslations({locale, namespace: 'Metadata'});
 
     return {
@@ -10,7 +11,8 @@ export async function generateMetadata({params: {locale}}) {
     };
 }
 
-export default async function Projects() {
+export default async function Projects({params: {locale}}) {
+    unstable_setRequestLocale(locale);
     const trans = await getTranslations('ProjectsPage');
 
     return <Videos trans={trans('headerText')}/>

@@ -1,7 +1,7 @@
 import { Work_Sans, Roboto } from "next/font/google";
 import "@/styles/globals.css";
 import MainLayout from "@/components/main_layout/MainLayout";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Work_Sans({styles: "300,400,500,600,700,800", subsets: ["latin"] });
 
@@ -19,10 +19,11 @@ export async function generateMetadata({params: {locale}}) {
   };
 }
 
-export default function RootLayout({ children, params }) {
+export default function RootLayout({children, params: {locale}}) {
+  unstable_setRequestLocale(locale);
   return (
-    <html style={{scrollBehavior: "smooth"}} lang={params.locale}>
-      <body className={params.locale == 'en' ? inter.className : pt.className}>
+    <html style={{scrollBehavior: "smooth"}} lang={locale}>
+      <body className={locale == 'en' ? inter.className : pt.className}>
         <MainLayout>
           {children}
         </MainLayout>

@@ -7,8 +7,11 @@ import News from "@/components/main_page/news/News";
 import Projects from "@/components/main_page/projects/Projects";
 import Services from "@/components/main_page/services/Services";
 import { useTranslations } from "next-intl";
+import {unstable_setRequestLocale} from 'next-intl/server';
 
-export default function Home() {
+export default function Home({params: {locale}}) {
+  unstable_setRequestLocale(locale);
+
   const trans = useTranslations('IndexPage');
   return <main>
     <MainSection trans={trans}/>

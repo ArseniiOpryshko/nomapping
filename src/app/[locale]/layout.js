@@ -7,6 +7,12 @@ const inter = Work_Sans({styles: "300,400,500,600,700,800", subsets: ["latin"] }
 
 const pt = Roboto({weight: ["400", "500", "900", "700", "900"], styles: "300,400,500,600,700,800", subsets: ["cyrillic"] });
 
+const locales = ['en', 'ua'];
+ 
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+}
+
 export async function generateMetadata({params: {locale}}) {
   const t = await getTranslations({locale, namespace: 'Metadata'});
  

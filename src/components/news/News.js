@@ -29,9 +29,9 @@ export default function News({trans}){
     return <section className={styles.news_section}>
         <Image width={734} height={875} className={styles.light1} src="/lights/newslight1.png" alt="newslight1"/>
         <Image width={528} height={560} className={styles.light2} src="/lights/newslight2.png" alt="newslight2"/>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
             {trans}
-        </h2>
+        </h1>
         {!items[0] ?  
             <div className={styles.loader}>
                 <div className={styles.inner_one} ></div>

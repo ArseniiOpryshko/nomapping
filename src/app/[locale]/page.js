@@ -6,13 +6,24 @@ import MainSection from "@/components/main_page/main/Main";
 import News from "@/components/main_page/news/News";
 import Projects from "@/components/main_page/projects/Projects";
 import Services from "@/components/main_page/services/Services";
-import { useTranslations } from "next-intl";
-import {unstable_setRequestLocale} from 'next-intl/server';
+import getDomain from "@/configs/baseDomain";
+import { getTranslations } from "next-intl/server";
 
-export default function Home({params: {locale}}) {
-  unstable_setRequestLocale(locale);
 
-  const trans = useTranslations('IndexPage');
+export async function generateMetadata() {
+  return {
+    alternates:{
+      languages: {
+          "en": `${getDomain()}/en`,
+          "uk-UA": `${getDomain()}/ua`
+      }
+    }
+  };
+}
+
+export default async function Home({params: {locale}}) {
+  const trans = await getTranslations({locale, namespace: 'IndexPage'});
+
   return <main>
     <MainSection trans={trans}/>
     <Clients/>

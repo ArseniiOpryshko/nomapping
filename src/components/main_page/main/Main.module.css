@@ -31,6 +31,9 @@
     justify-content: center;
     align-items: center;
 }
+.hidden{
+    display: none;
+}
 .centralflex{
     max-width: 1000px;
     display: flex;
@@ -40,12 +43,13 @@
     position: relative;
     text-align: center;
 }
-.centralflex h1{
+
+.centralflex h2{
     text-align: center;
     font-size:80px;
     padding-left: 3px;
 }
-.centralflex h1 span{
+.centralflex h2 span{
     text-align: center;
     font-size: 80px;
     padding: 0;
@@ -75,10 +79,10 @@
     }
 }
 @media screen and (max-width: 850px) {
-    .centralflex h1{
+    .centralflex h2{
         font-size: calc(16px + 64 * (100vw / 1950));
     }
-    .centralflex h1 span{
+    .centralflex h2 span{
         font-size: calc(16px + 64 * (100vw / 1950));
     }
     .initspan{

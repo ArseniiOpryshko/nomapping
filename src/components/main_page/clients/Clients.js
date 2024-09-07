@@ -25,7 +25,7 @@ const images2 = [
     'turbo.png',
     'КВЗ.png',
 ];
-export default function Clients({trans}){
+export default function Clients(){
     return <section className={styles.clients} id="clients">
         <Image className={styles.light} alt="light" src="/lights/logosLight.png" width={733} height={602}/>
 

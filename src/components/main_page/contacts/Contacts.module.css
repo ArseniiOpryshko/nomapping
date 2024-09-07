@@ -33,11 +33,11 @@
     width: 300px;
 }
 .data{
-    font-size: 20px;
-
+    font-size: 25px;
+    font-weight: 600;
 }
 .column_header{
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -100,18 +100,21 @@
         width: 90%;
         justify-content: center;
     }
+    .light2{
+        display: none;
+    }
 }
 @media screen and (max-width: 500px) {
     .information h3{
-        font-size: calc(4px + 81 * (100vw / 500));
+        font-size: calc(3px + 81 * (100vw / 500));
     }
     .information h3 span{
-        font-size: calc(4px + 81 * (100vw / 500));
+        font-size: calc(3px + 81 * (100vw / 500));
     }
     .data{
-        font-size: 14px;
+        font-size: calc(5px + 18 * (100vw / 500));
     }
     .column_header{
-        font-size: 22px;
+        font-size: calc(11px + 32 * (100vw / 500));
     }
 }

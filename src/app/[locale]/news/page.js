@@ -1,20 +1,24 @@
 import News from "@/components/news/News"
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({params: {locale}}) {
-    unstable_setRequestLocale(locale);
     const t = await getTranslations({locale, namespace: 'Metadata'});
 
     return {
         title: t('news_h'),
         description: t('news_desc'),
+        alternates:{
+            canonical: `/news`,
+            languages: {
+                "en": "/en/news",
+                "uk-UA": "/ua/news"
+            }
+        }
     };
 }
 
 
-export default async function NewsPage({params: {locale}}) {
-    unstable_setRequestLocale(locale);
+export default async function NewsPage() {
     const trans = await getTranslations('NewsPage');
     return <News trans={trans('headerText')}/>
 }

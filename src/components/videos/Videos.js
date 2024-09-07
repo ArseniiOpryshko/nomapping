@@ -50,7 +50,7 @@ export default function Videos({trans}){
     return <section className={styles.projects_section}>
             <Image width={613} height={372} className={styles.light2} src="/lights/projecstlight4.png" alt="project"/>
             <Image width={1338} height={1352} className={styles.light} src="/lights/projecstlight.png" alt="project"/>
-            <h2 className={styles.projh}>{trans}</h2>
+            <h1 className={styles.projh}>{trans}</h1>
             <div className={styles.projects}>
                 {projects.map((item, i) => (
                     <Video key={i} project={item} index={i} />

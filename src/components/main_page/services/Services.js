@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "./Services.module.css"
+import Link from "next/link"
 
 
 export default function Services({trans}){
@@ -45,9 +46,9 @@ export default function Services({trans}){
                     <p>{trans('serviceInfo4')}</p>
                 </div>
             </div>
-            <a className={styles.bttn} href="/nomapping.pdf">
+            <Link className={styles.bttn} href="/nomapping.pdf">
                 {trans('serviceBttn')}
-            </a>
+            </Link>
         </div>
     </section>
 }

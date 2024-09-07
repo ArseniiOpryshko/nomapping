@@ -2,11 +2,12 @@
 import { extractImageSrcFromHTML } from "@/configs/extractImageSrcFromHTML"
 import styles from "../News.module.css"
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function CertainNews({item}){
     const router = usePathname();
 
-    return <a className={styles.bottom_block} href={`${router}/`+item?.title[0]}> 
+    return <Link className={styles.bottom_block} href={`${router}/`+item?.title[0]}> 
         <img className={styles.img} src={extractImageSrcFromHTML(item['content:encoded'])}/>
         <div className={styles.overlay}>
             <h3 className={styles.name}>
@@ -16,5 +17,5 @@ export default function CertainNews({item}){
                 {item?.pubDate[0].split(' ').slice(0, 4).join(' ')}
             </h4>
         </div>
-    </a>
+    </Link>
 }

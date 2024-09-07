@@ -12,7 +12,7 @@
     border: 2px solid white;
     font-size: 25px;
     font-weight: bold;
-    width: 270px;
+    width: 350px;
     padding: 7px 10px;
     text-align: center;
     color: white;
@@ -20,7 +20,7 @@
     margin: 0 auto;
     cursor: pointer;
     z-index: 2;
-    /* margin-bottom: 100px; */
+    text-transform: uppercase;
     transition: 0.2s;
 }
 .bttn:hover{

@@ -12,12 +12,10 @@ export default function Main({trans}){
         </div>
         <div className={styles.content}>
             <div className={styles.centralflex}>
-                <h1>
+                <h1 className={styles.hidden}>{trans('title')}</h1>
+                <h2>
                     <TextAnimation1 text={trans('title')} delay={400}/>
-                </h1>
-                <span className={styles.initspan}>
-                    <TextAnimation1 text="NoMapping Studio" delay={800}/>
-                </span>
+                </h2>
             </div>
         </div>
     </section>

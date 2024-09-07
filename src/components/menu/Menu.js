@@ -2,13 +2,15 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./Menu.module.css"
 import { useEffect, useTransition } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Menu({trans, isActive, handleClick}){
 
     const controls = useAnimation();
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
+    const pathName = usePathname();
 
     useEffect(() => {
         if (isActive) {
@@ -40,12 +42,33 @@ export default function Menu({trans, isActive, handleClick}){
                     <button onClick={languageHandler} value={'en'} className={styles.language}>ENG</button>
                 </div>
                 <div className={styles.routes}>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#home" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>{trans[0]}</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#clients" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>{trans[1]}</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#aboutus" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>{trans[2]}</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>{trans[3]}</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#projects" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>{trans[4]}</motion.a>
-                    <motion.a onClick={handleClick} className={styles.route} href="/#contacts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>{trans[5]}</motion.a>
+                    <Link href="/#home" className={styles.route}>
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>{trans[0]}</motion.a>
+                    </Link>
+
+                    <Link href="/#clients" className={styles.route} >
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>{trans[1]}</motion.a>
+                    </Link>
+
+                    <Link className={styles.route} href="/#aboutus">
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>{trans[2]}</motion.a>
+                    </Link>
+
+                    <Link href="/#services" className={styles.route}>
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>{trans[3]}</motion.a>
+                    </Link>
+
+                    <Link href={`${pathName}/projects`} className={styles.route}>
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>{trans[4]}</motion.a>
+                    </Link>
+
+                    <Link href={`${pathName}/news`} className={styles.route}>
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>{trans[5]}</motion.a>
+                    </Link>
+
+                    <Link href="/#contacts" className={styles.route}>
+                        <motion.a onClick={handleClick} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>{trans[6]}</motion.a>
+                    </Link>               
                 </div>
                 <nav className={styles.socials}>
                     <motion.a target="_blank" href="https://www.facebook.com/NoMapping" className={styles.socialLink} initial={{ opacity: 0}} animate={{ opacity: 0.5}} transition={{ delay: 0.8 }}> <img src="/icons/facebook.png" alt="Facebook" /></motion.a>

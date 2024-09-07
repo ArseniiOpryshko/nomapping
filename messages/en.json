@@ -23,7 +23,7 @@
       "serviceBttn":"ALL SERVICES",
       "headerService":"ALL SERVICES",
 
-      "headerProjects":"What have we done",
+      "headerProjects":"Our projects",
       "projectBttn1":"All projects",
       "projectBttn2":"Order new project",
 
@@ -44,10 +44,11 @@
       "aboutUs": "ABOUT US",
       "service": "SERVICE",
       "projects": "PROJECTS",
+      "news": "NEWS",
       "contacts": "CONTACTS"
     },
     "ProjectsPage":{
-      "headerText": "PROJECTS"
+      "headerText": "ALL PROJECTS"
 
     },
     "ProjectPage":{

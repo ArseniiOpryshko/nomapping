@@ -59,6 +59,13 @@
     color: white;
     
 }
+.backlink{
+  color: white;
+  text-decoration: none;
+}
+.backlink:hover{
+  text-decoration: underline;
+}
 .light1{
     position: absolute;
     top: 10%;

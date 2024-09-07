@@ -26,8 +26,7 @@ const getData = async (project_id) => {
 };
 
 
-export async function generateMetadata({params: {locale}, params: {project_id}}){
-    unstable_setRequestLocale(locale);
+export async function generateMetadata({ params: {project_id}}){
     const video = await getData(project_id);
     
     return {
@@ -39,30 +38,18 @@ export async function generateMetadata({params: {locale}, params: {project_id}})
                     url: video.pictures.base_link
                 }
             ]
+        },
+        alternates:{
+            canonical: `/projects/${video.name}`,
+            languages: {
+                "en": `/en/projects/${video.name}`,
+                "uk-UA": `/ua/projects/${video.name}`
+            }
         }
     }
 }
 
-export async function generateStaticParams() {
-    const resp = await axios.get('https://api.vimeo.com/users/nomapping/videos', {
-        headers: {
-          Authorization: 'Bearer 356b932c2a2e22b86926fa64a675540d'
-        }
-    });
-
-    const ar = resp.data.data.map(project => {
-        const uri = project.uri;  
-        const digitsArray = uri.match(/\d+/g);        
-        const digits = digitsArray ? digitsArray.join("") : "";
-        return {
-            project_id: digits
-        }
-    })
-    return ar;
-}
-
-export default async function Project({params: {locale}, params: {project_id}}) {
-    unstable_setRequestLocale(locale);
+export default async function Project({params: {project_id}}) {
     const trans = await getTranslations('ProjectPage');
     const video = await getData(project_id);
 

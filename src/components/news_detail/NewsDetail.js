@@ -4,6 +4,7 @@ import styles from "./NewsDetail.module.css"
 import axios from "axios";
 import { parseXmlToJson } from "@/configs/parseXmlToJson";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NewsDetail({name}){
     const [item, setItem] = useState(null);
@@ -25,6 +26,7 @@ export default function NewsDetail({name}){
         <Image width={528} height={560} className={styles.light2} src="/lights/certainnewslight2.png" alt="newslight2"/>
 
         {item ? <div className={styles.container}>
+                <Link className={styles.backlink} href="/news">&#x2196; Back to news</Link>
                 <h2 className={styles.name}>
                     {item?.title[0]}
                 </h2>

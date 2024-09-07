@@ -10,7 +10,7 @@ export default function Contacts({trans}){
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true});
     
-    return <section className={styles.contacts_section} id="contacts">
+    return <section className={styles.contacts_section}>
         <Image width={1230} height={778} className={styles.light1} alt="light_contacts1" src="/lights/contactlight1.png"/>
         <Image width={1419} height={1807} className={styles.light2} alt="light_contacts2" src="/lights/contactlight2.png"/>
 
@@ -34,7 +34,7 @@ export default function Contacts({trans}){
             </div>
             <div className={styles.social_medias}>
                 <h4 className={styles.column_header}>{trans[5]}</h4>
-                <div className={styles.social_flex}>
+                <div className={styles.social_flex} id="contacts">
                     <a className={styles.link} target="_blank" href="https://www.linkedin.com/company/nomapping/about/">
                         <Image width={43} height={30} src="/socials/linked.png" alt="soc_media6"/>
                     </a>

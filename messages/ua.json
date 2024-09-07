@@ -23,7 +23,7 @@
     "serviceBttn":"ВСІ ПОСЛУГИ",
     "headerService":"ВСІ ПОСЛУГИ",
 
-    "headerProjects": "Що ми зробили",
+    "headerProjects": "Наші проекти",
     "projectBttn1": "Всі проекти",
     "projectBttn2": "Замовити новий проект",
     
@@ -44,10 +44,11 @@
     "aboutUs": "ПРО НАС",
     "service": "ПОСЛУГИ",
     "projects": "ПРОЕКТИ",
+    "news": "НОВИНИ",
     "contacts": "КОНТАКТИ"
   },
   "ProjectsPage":{
-    "headerText": "ПРОЕКТИ"
+    "headerText": "ВСІ ПРОЕКТИ"
   },
   "ProjectPage":{
     "about": "ПРО ПРОЕКТ",

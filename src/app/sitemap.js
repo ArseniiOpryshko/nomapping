@@ -1,6 +1,8 @@
 import { parseXmlToJson } from "@/configs/parseXmlToJson";
 import axios from "axios";
 
+const domen = 'https://phah.pp.ua';
+
 export default async function sitemap(){
     const resp1 = await axios.get('https://api.vimeo.com/users/nomapping/videos', {
         headers: {
@@ -14,11 +16,11 @@ export default async function sitemap(){
         const digits = digitsArray ? digitsArray.join("") : "";
 
         return {
-            url: `https://nomapping.com/projects/${digits}`,
+            url: `${domen}/projects/${digits}`,
             alternates: {
                 languages: {
-                  en: `https://nomapping.com/en/projects/${digits}`,
-                  ua: `https://nomapping.com/ua/projects/${digits}`,
+                  en: `${domen}/en/projects/${digits}`,
+                  ua: `${domen}/ua/projects/${digits}`,
                 },
             }
         };
@@ -30,11 +32,11 @@ export default async function sitemap(){
     const news = jsonData.rss.channel[0].item.map(project => {
         
         return {
-            url: `https://nomapping.com/projects/${encodeURIComponent(project?.title[0])}`,
+            url: `${domen}/projects/${encodeURIComponent(project?.title[0])}`,
             alternates: {
                 languages: {
-                  en: `https://nomapping.com/en/projects/${encodeURIComponent(project?.title[0])}`,
-                  ua: `https://nomapping.com/ua/projects/${encodeURIComponent(project?.title[0])}`,
+                  en: `${domen}/en/projects/${encodeURIComponent(project?.title[0])}`,
+                  ua: `${domen}/ua/projects/${encodeURIComponent(project?.title[0])}`,
                 },
             }
         };
@@ -42,29 +44,29 @@ export default async function sitemap(){
     
     return [
         {
-            url: 'https://nomapping.com',
+            url: `${domen}`,
             alternates: {
               languages: {
-                en: 'https://nomapping.com/en',
-                ua: 'https://nomapping.com/ua',
+                en: `${domen}/en`,
+                ua: `${domen}/ua`,
               },
             }
         },
         {
-            url: 'https://nomapping.com/projects',
+            url: `${domen}/projects`,
             alternates: {
               languages: {
-                en: 'https://nomapping.com/en/projects',
-                ua: 'https://nomapping.com/ua/projects',
+                en: `${domen}/en/projects`,
+                ua: `${domen}/ua/projects`,
               },
             }
         },
         {
-            url: 'https://nomapping.com/news',
+            url: `${domen}/news`,
             alternates: {
               languages: {
-                en: 'https://nomapping.com/en/news',
-                ua: 'https://nomapping.com/ua/news',
+                en: `${domen}/en/news`,
+                ua: `${domen}/ua/news`,
               },
             }
         },

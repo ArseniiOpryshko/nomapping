@@ -1,3 +1,5 @@
+import getDomain from "@/configs/baseDomain";
+
 export default function robots(){
     return {
         rules: [
@@ -6,6 +8,6 @@ export default function robots(){
                 allow: "/"
             }
         ],
-        sitemap: "https://nomapping.com/sitemap.xml"
+        sitemap: `${getDomain()}/sitemap.xml`
     }
 }

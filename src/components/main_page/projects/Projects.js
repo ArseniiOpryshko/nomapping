@@ -5,6 +5,7 @@ import Project from "./project/Project"
 import axios from "axios";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 // import { useRouter } from 'next/router';
 
 export default function Projects({trans}){
@@ -39,8 +40,8 @@ export default function Projects({trans}){
             }
         </div>
         <div className={styles.btnns}>
-            <a className={styles.btn} href={`${router}/projects`}>{trans[1]}</a>
-            <a className={styles.btn} href="#contacts">{trans[2]}</a>
+            <Link className={styles.btn} href={`${router}/projects`}>{trans[1]}</Link>
+            <Link className={styles.btn} href="/#contacts">{trans[2]}</Link>
         </div>
     </section>
 }
